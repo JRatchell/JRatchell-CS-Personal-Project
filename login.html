@@ -8,7 +8,7 @@
     <script src="/public/scripts.js" defer></script>
     <title>Login Page</title>
 </head>
-<body class="logins">
+<body onload="aboutIntent('Focus for what to be worked on right now will primarily be css styling of the page')" class="logins">
     <h1>Log in to Your Account</h1>
     <br>
     <form>
@@ -21,10 +21,19 @@
         <br>
         <input type="text" id="login_pass" name="logPass" placeholder="Enter your password here">
         <p>Forgot password? <a>Click here</a></p>
-        <p>Don't have an account? <a>Click here</a></p>    
+        <p>Don't have an account? <a href="getStarted.html">Click here</a></p>    
     </form>
     
     
     
 </body>
 </html>
+
+<!--
+    High Priority:
+    1. CSS Styling to look more visually appealing
+    2. Figuring out why any attempt to change it's position will force the content of the page to jitter back to the top left
+
+    Medium/Low Priority:
+    1. Create account creation/forgotten password page so that the text actually has a link to go to.
+-->
