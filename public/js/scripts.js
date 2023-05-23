@@ -1,3 +1,4 @@
+confirm("the ejs is working if you can see this")
 function WIP (msg) {
     alert(msg);
 }
