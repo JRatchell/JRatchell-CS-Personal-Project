@@ -1,11 +1,15 @@
 //all of the handler functions and the places the user can go without authentication//
-//const siteData = require('../data/site-data');
+
+//calls data needed from the site
+const siteData = require('../data/site-data');
+const passport = require('passport')
 module.exports = {
     index: (request, response) => {
       response.render('pages/index', {
-         /* name: siteData.userName,
+          name: siteData.userName,
           copyrightYear: siteData.year,
-          signedIn: siteData.signedIn */
+          signedIn: siteData.signedIn 
       });
+      
     },
 }
