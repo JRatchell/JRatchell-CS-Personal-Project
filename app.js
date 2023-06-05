@@ -1,4 +1,6 @@
+// this is where our entry point file is, middle ware, express and server
 const express = require('express');
+//const { request } = require('https');
 const app = express();
 const PORT = 3000;
 
