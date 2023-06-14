@@ -13,3 +13,6 @@ module.exports = {
       
     },
 }
+// Continue working on when I'm not falling asleep over and over
+
+//Priority list

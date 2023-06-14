@@ -19,14 +19,14 @@ padding: 10px;
     word-spacing: 50px;
     text-indent: 50px;
 }
-/* Extra customization for the login boxes, seems like it does not work due to the boxes being inside of the <form>, will figure out I get the rest of the skeleton situated
+ Extra customization for the login boxes, seems like it does not work due to the boxes being inside of the form, will figure out once I get the rest of the skeleton situated
 div#login_pass input[type=text] {
     background-color: white;
 }
 div#login_name
-*/
 
-/*
+
+
 .comic_index_logo {
     width: 200px;
 }
