@@ -2,6 +2,7 @@
 
 //calls data needed from the site
 //const siteData = require('../data/site-data');
+const express = require('express')
 const passport = require('passport')
 module.exports = {
   //Index Page
@@ -28,10 +29,10 @@ module.exports = {
         googleId: request.body.googleId
       });
 
-    request.login(user, (error) => {
-      if (error) {
+    request.login(user, (err) => {
+      if (err) {
         response.redirect('/login') 
-        return error
+        return err
       } else {
         passport.authenticate('local')(request, response, () => {
           response.redirect('/account');
@@ -56,9 +57,9 @@ module.exports = {
   },
     //Register Post
     register_post:(request, response) => {
-      User.register({username: request.body.username}, {password: request.body.password}, (error, user) => {
-          if (error) {
-              console.log(error);
+      User.register({username: request.body.username}, {password: request.body.password}, (err, user) => {
+          if (err) {
+              console.log(err);
               response.redirect('/register');
           } else {
               passport.authenticate('local')(request, response, () => {
