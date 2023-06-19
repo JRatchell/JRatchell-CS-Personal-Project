@@ -2,6 +2,23 @@
     <title>Account Page</title>
 <%-include('../partials/nav') -%>
 
-<body class="account" onload="accountIntent('This will be where all account management will take place, along with some customization of the site itself if I get to it.')">
- <h1>ACOOOOOOOOOOOOOOOOOOOOOOOOOOOOOoooo</h1>   
+<div>
+    <span>
+     <h1>Account</h1>   
+    </span>
+    <section>
+        <%for (entry of data)%>
+            <span>
+                <p><%= entry.title%></p>
+                <p><%= entry.author%></p>
+                <p><%= entry.task%></p>
+            </span>
+        <%}%>
+    </section>
+    <span>
+        <form action="/tasks/<%=entry._id%>?_method=DELETE" enctype="application/x-www-form-urlencoded" class="inline">
+            <input type="submit"/>
+        </form>
+    </span>
+</div>
  <%-include('../partials/footer') -%>

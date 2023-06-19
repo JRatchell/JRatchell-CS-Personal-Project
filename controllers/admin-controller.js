@@ -4,7 +4,7 @@ const passport = require('passport')
 
 //Make task model
 const Task = require('../model/task-model')
-const data = require('../data/data')
+//const data = require('../data/data')
 
 module.exports = {
 //Account
