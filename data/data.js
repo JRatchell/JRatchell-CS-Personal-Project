@@ -1,1 +1,14 @@
-//Still tryna figure out if this is supposed to be different from the page-data page that you have in the template, please let me know
+module.exports = [
+    {
+        _id: uuid(),
+        title: "",
+        author: "",
+        task: "",
+    },
+    {
+        _id: 1 ,
+        title: "Test",
+        author: "Joshua Ratchell",
+        task: "Get this project to a presentable form by the end of the day tomorrow",
+    }
+]

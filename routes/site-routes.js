@@ -1,6 +1,6 @@
 //This talks to site-controller.js//
 const express = require('express');
-const siteCtrl = require('../controller/site-controller');
+const siteCtrl = require('../controllers/site-controller');
 const router = express.Router();
 
 // SITE ROUTES

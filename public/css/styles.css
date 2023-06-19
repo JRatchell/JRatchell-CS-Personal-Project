@@ -201,3 +201,67 @@ table#admin th {
 div#main_box h1 {
     color: #063C5E;
 }
+
+
+
+/* Mobile Responsiveness for large items */
+.side-scroll-mobile {
+    display: flex;
+    overflow-y: scroll;
+    overflow-x: auto;
+    border: solid 5px var(--yellow);
+}
+
+.mobile-container {
+    max-width: 768px;
+    /* margin: auto; */
+    height: 150px;
+    color:var(--cosmic-latte);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative; 
+    /* display: flex; */
+}
+
+.open-sesame {
+    display: none;
+}
+
+.mobile-container > .nav-bar {
+    display: none;
+}
+
+.nav-bar-list {
+    display: flex;
+    /* make titles shorter */
+    flex-direction: row;
+    /* used to be column for longer titles */
+    align-items: flex-start;     /* items are aligned to the left */
+}
+.nav-bar-list a {
+    margin: 20px 15px;
+}
+.nav-bar-list a:hover {
+    color: var(--medium-champagne);
+}
+
+.mobile-container > .hamburger {
+    overflow: visible;
+    position: relative;
+    padding: 14px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 120px;
+    width: auto;
+}
+
+/* Tablet Design [hamburger] */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+.hamburger {
+    overflow: hidden;
+    position: relative;
+    display: none; 
+    }
+}
