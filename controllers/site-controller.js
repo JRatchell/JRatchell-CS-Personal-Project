@@ -4,6 +4,7 @@
 //const siteData = require('../data/site-data');
 const passport = require('passport')
 module.exports = {
+  //Index Page
     index: (request, response) => {
       response.render('pages/index', {
            /*name: siteData.userName,
@@ -12,7 +13,77 @@ module.exports = {
       });
       
     },
+
+    //Login page
+    login: (request, response) => {
+      response.render('pages/login');
+    
+    },
+
+    //Login Post
+    login_post: (request, response) => {
+      const user = new user({
+        username: request.body.username,
+        password: request.body.password,
+        googleId: request.body.googleId
+      });
+
+    request.login(user, (error) => {
+      if (error) {
+        response.redirect('/login') 
+        return error
+      } else {
+        passport.authenticate('local')(request, response, () => {
+          response.redirect('/account');
+        });
+      }
+    });
+    },
+
+    logout: (request, response) => {
+      // new code as of 6/2022 - the correct logout function
+      request.logout(function(err) {
+        // destroy the session for the user
+        if (err) { return next(err); }
+        // redirect back to the homepage
+        response.redirect('/');
+      });
+    },
+
+    //Register
+    register: (request, response) => {
+      response.render('pages/register');
+  },
+    //Register Post
+    register_post:(request, response) => {
+      User.register({username: request.body.username}, {password: request.body.password}, (error, user) => {
+          if (error) {
+              console.log(error);
+              response.redirect('/register');
+          } else {
+              passport.authenticate('local')(request, response, () => {
+                  response.redirect('/login');
+              });
+          }
+      });
+  },
+  
+    //Create 
+    create_task: (request, response) => {
+      response.render('pages/create')
+  },
+    //About
+    about: (request, response) => {
+      response.render('pages/about');
+  
+  },
+
 }
 // Continue working on when I'm not falling asleep over and over
 
 //Priority list
+
+
+
+
+
