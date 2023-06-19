@@ -4,12 +4,12 @@ const passport = require('passport')
 
 //Make task model
 const Task = require('../model/task-model')
-//const data = require('../data/data')
+const data = require('../data/data')
 
 module.exports = {
 //Account
  account : (request, response) => {
-        response.render('pages/account')
+    response.render('pages/account', {data:data}) 
         //Bypass authentication
        /* if (request.isAuthenticated()) {
         Task.find({}, (err, data) => {

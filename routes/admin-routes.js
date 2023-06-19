@@ -4,6 +4,12 @@ const router = express.Router();
 const adminController = require('../controllers/admin-controller');
 
 router.route('/')
-.get(adminController.account);
+.get(adminController.account)
+
+.get(adminController.read_task)
+
+.post(adminController.delete_task)
+
+.delete(adminController.delete_task)
 
 module.exports = router;

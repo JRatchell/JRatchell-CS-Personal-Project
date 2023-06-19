@@ -6,19 +6,7 @@
     <span>
      <h1>Account</h1>   
     </span>
-    <section>
-        <%for (entry of data)%>
-            <span>
-                <p><%= entry.title%></p>
-                <p><%= entry.author%></p>
-                <p><%= entry.task%></p>
-            </span>
-        <%}%>
-    </section>
-    <span>
-        <form action="/tasks/<%=entry._id%>?_method=DELETE" enctype="application/x-www-form-urlencoded" class="inline">
-            <input type="submit"/>
-        </form>
-    </span>
+    <%-include('../partials/loop') -%>
+
 </div>
  <%-include('../partials/footer') -%>
