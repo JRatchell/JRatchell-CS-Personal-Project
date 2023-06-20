@@ -72,6 +72,14 @@ module.exports = {
     //Create 
     create_task: (request, response) => {
       response.render('pages/create')
+      const {title, author, task} = request.body
+      const newTask = new Task ({
+          title: title,
+          author: author,
+          task: task
+      })
+      newTask.save()
+      //response.redirect('/')
   },
     //About
     about: (request, response) => {

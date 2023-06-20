@@ -9,7 +9,7 @@ const data = require('../data/data')
 module.exports = {
 //Account
  account : (request, response) => {
-    response.render('pages/account', {data:data}) 
+    //response.render('pages/account', {data:data}) 
         //Bypass authentication
        /* if (request.isAuthenticated()) {
         Task.find({}, (err, data) => {
@@ -23,6 +23,14 @@ module.exports = {
         }*/
 
         //End authentication   
+        Task.find({}, (err, data) => {
+            if (err) {
+                return err
+            } else {
+                response.render('pages/account', {data:data}) 
+                //data:data
+            }
+        })
     },
 //Only the admin route will have requests authenticated
 
@@ -48,5 +56,15 @@ delete_task: (request, response) => {
                 response.redirect('/account');
             }
         })
+},
+create_task: (request, response) => {
+    const {title, author, task} = request.body
+    const newTask = new Task ({
+        title: title,
+        author: author,
+        task: task
+    })
+    newTask.save()
+    response.render('pages/account')
 }
 }

@@ -22,7 +22,8 @@ router.route('/login')
   .post(siteController.login_post);
 
 router.route('/create-task')
-  .get(siteController.create_task);
+  .get(siteController.create_task)
+  .post(siteController.create_task);
 
 module.exports = router;
 

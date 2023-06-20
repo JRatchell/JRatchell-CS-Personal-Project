@@ -4,7 +4,7 @@
 <body onload="aboutIntent('Focus for what to be worked on right now will primarily be css styling of the page')" class="logins">
     <h1>Log in to Your Account</h1>
     <br>
-    <form>
+    <form action="/account" method="POST" >
         <label for="login_name">Email/Username</label>
         <br>
         <input type="text" id="login_name" name="logName" placeholder="Enter your username or email here">
@@ -13,8 +13,10 @@
         <label for="login_pass">Password</label>
         <br>
         <input type="text" id="login_pass" name="logPass" placeholder="Enter your password here">
+        <br>
+        <input type="submit">
         <p>Forgot password? <a>Click here</a></p>
-        <p>Don't have an account? <a href="getStarted.html">Click here</a></p>    
+        <p>Don't have an account? <a href="register.ejs">Click here</a></p>    
     </form>
     
 <%-include('../partials/footer') -%>

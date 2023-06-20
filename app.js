@@ -2,7 +2,8 @@ require('dotenv').config()
 const methodOverride = require('method-override')
 // this is where our entry point file is, middle ware, express and server
 const express = require('express');
-//const { request } = require('https');
+const session = require('express-session')
+const passport = require('passport')
 const app = express();
 const PORT = process.env.PORT || 3000;
 
