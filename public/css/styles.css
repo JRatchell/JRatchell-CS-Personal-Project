@@ -152,6 +152,11 @@ div#login_name
     flex-direction: column;
 }
 
+.blue_bg {
+    background-color: #063C5E;
+    color: #FFFFFF;
+}
+
 
 
 
