@@ -1,5 +1,4 @@
 require('dotenv').config()
-const methodOverride = require('method-override')
 // this is where our entry point file is, middle ware, express and server
 const express = require('express');
 const session = require('express-session')
@@ -16,6 +15,8 @@ const path = require('path');
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine','ejs');
 
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
 
 // Adding Functionality to app.js
 app.use(express.urlencoded({extended: true}));
