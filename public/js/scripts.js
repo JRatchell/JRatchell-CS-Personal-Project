@@ -1,4 +1,4 @@
-confirm("the ejs is working if you can see this")
+
 
 // Hamburger Menu
 // DOM Event Steps:
