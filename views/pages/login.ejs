@@ -14,9 +14,11 @@
         <br>
         <input type="text" id="login_pass" name="logPass" placeholder="Enter your password here">
         <br>
-        <input type="submit">
-        <p>Forgot password? <a>Click here</a></p>
-        <p>Don't have an account? <a href="register.ejs">Click here</a></p>    
+        <a href="/account" role="button" type="submit">Submit</a>
+        <!-- <p>Forgot password? <a>Click here</a></p> -->
+        <a href="/auth/google/" role="button">Sign In with Google</a> 
+
+        <p>Don't have an account? <a href="/register">Click here</a></p>    
     </form>
     
 <%-include('../partials/footer') -%>

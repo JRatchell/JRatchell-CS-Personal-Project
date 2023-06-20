@@ -87,7 +87,19 @@ module.exports = {
   
   },
 
+google_get: passport.authenticate('google', {scope: ['openid', 'profile', 'email']}),
+
+google_redirect_get: [
+    passport.authenticate('google', {failureRedirect: '/login'}),
+    function(request, response) {
+        // Successful authentication, redirect home.
+        response.redirect('/account');
+
+    }
+],
 }
+
+
 // Continue working on when I'm not falling asleep over and over
 
 //Priority list

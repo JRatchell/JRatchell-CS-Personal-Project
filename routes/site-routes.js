@@ -25,6 +25,14 @@ router.route('/create-task')
   .get(siteController.create_task)
   .post(siteController.create_task);
 
+router.route('/auth/google')
+  .get(siteController.google_get);
+
+router.route('/auth/google/admin')
+  .get(siteController.google_redirect_get);
+
+
+
 module.exports = router;
 
 
